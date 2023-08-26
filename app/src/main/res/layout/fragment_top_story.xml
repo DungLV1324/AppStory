@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/im_back">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_list_top"
+                    android:layout_width="match_parent"
+                    android:minLines="2"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_top_story"
+                    android:padding="@dimen/dimen_10dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:spanCount="2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                   />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_10dp"
+            android:background="@drawable/custom_ripple_back"
+            android:src="@drawable/ic_back"
+            android:padding="@dimen/dimen_6dp"
+            android:layout_marginStart="@dimen/dimen_6dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen_10dp"
+            android:fontFamily="@font/fonts_black"
+            android:text="@string/top_story"
+            android:textSize="@dimen/dimen_20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/im_back"
+            app:layout_constraintLeft_toRightOf="@id/im_back"
+            app:layout_constraintTop_toTopOf="@id/im_back"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

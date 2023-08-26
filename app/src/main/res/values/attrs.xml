@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextViewHomeMenu">
+        <attr name="textTop" format="string" />
+        <attr name="textBottom" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewStar">
+        <attr name="numberStar" format="integer" />
+    </declare-styleable>
+</resources>
+

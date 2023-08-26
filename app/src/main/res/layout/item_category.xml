@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_0dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:foreground="@drawable/custom_ripple_rectangle"
+            app:layout_constraintDimensionRatio="2.5:1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:background="@color/transparent"
+                android:elevation="@dimen/dimen_10dp"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardCornerRadius="@dimen/dimen_10dp"
+                app:cardElevation="@dimen/dimen_0dp">
+
+                <View
+                    android:id="@+id/view_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.15"
+                    android:background="#BBC8BC" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_name_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingEnd="@dimen/dimen_8dp"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/dimen_16sp"
+                        tools:text="Truyện Hot"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/tv_sum_story"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingEnd="@dimen/dimen_8dp"
+                        android:textColor="#A9AFB4"
+                        android:textSize="@dimen/dimen_12sp"
+                        tools:text="Truyện Hot"
+                        tools:ignore="RtlSymmetry" />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_line_vertical"
+            android:layout_width="@dimen/dimen_6dp"
+            android:layout_height="@dimen/dimen_0dp"
+            app:cardCornerRadius="@dimen/dimen_10dp"
+            android:layout_marginVertical="@dimen/dimen_16dp"
+            android:background="@color/transparent"
+            app:cardBackgroundColor="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="@id/layout_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layout_text">
+
+            <View
+                android:id="@+id/view_line_vertical"
+                android:layout_width="@dimen/dimen_10dp"
+                android:layout_height="match_parent"
+                android:background="#3AAF43" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/custom_ripple_rectangle"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/v_item_story"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_marginHorizontal="@dimen/dimen_5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="5:2.8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_avatar"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_0dp"
+            app:cardCornerRadius="@dimen/dimen_10dp"
+            android:layout_marginVertical="@dimen/dimen_10dp"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            app:layout_constraintDimensionRatio="283:423"
+            app:layout_constraintBottom_toBottomOf="@id/v_item_story"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/im_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/truy_n_88"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_marginStart="@dimen/dimen_15sp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:textSize="@dimen/dimen_20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/cv_avatar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cv_avatar" />
+
+
+        <TextView
+            android:id="@+id/tv_chapter_sum"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_height="wrap_content"
+            android:text="@string/t_ng_s_ch_ng"
+            android:textSize="@dimen/dimen_15sp"
+            android:paddingVertical="3dp"
+            app:layout_constraintLeft_toLeftOf="@id/v_start"
+            app:layout_constraintTop_toBottomOf="@id/v_start" />
+
+        <TextView
+            android:id="@+id/tv_chapter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fonts_light"
+            android:text="@string/truy_n_88"
+            android:textColor="#2196F3"
+            android:paddingVertical="@dimen/dimen_3dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:textSize="@dimen/dimen_15sp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            app:layout_constraintLeft_toRightOf="@id/tv_chapter_sum"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_start" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fonts_light"
+
+            android:text="@string/truy_n_88"
+            android:textColor="#2196F3"
+            android:textSize="@dimen/dimen_14sp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            app:layout_constraintLeft_toRightOf="@id/tv_type_content"
+            app:layout_constraintRight_toRightOf="@id/tv_chapter"
+            app:layout_constraintTop_toBottomOf="@id/tv_chapter_sum"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tv_type_content"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_height="wrap_content"
+            android:text="@string/th_lo_i"
+            android:textSize="@dimen/dimen_14sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_chapter_sum"
+            app:layout_constraintTop_toBottomOf="@id/tv_chapter_sum"
+            tools:ignore="RtlSymmetry" />
+
+        <com.dungLv.ui.ViewStar
+            android:id="@+id/v_start"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            tools:ignore="RtlSymmetry" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

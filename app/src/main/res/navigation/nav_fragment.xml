@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fragment"
+    app:startDestination="@id/fragment_home">
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.dungLv.ui.HomeFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/fragment_top"
+        android:name="com.dungLv.ui.home.top.TopStoryFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_top_story" />
+    <fragment
+        android:id="@+id/fragment_category"
+        android:name="com.dungLv.ui.home.category.CategoryStoryFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_type_story" />
+    <fragment
+        android:id="@+id/fragment_bookmark"
+        android:name="com.dungLv.ui.home.bookmark.BookMarkStoryFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_book_mark" />
+    <fragment
+        android:id="@+id/fragment_rank"
+
+        android:name="com.dungLv.ui.home.rank.RankStoryFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_rank_story" />
+    <fragment
+        android:id="@+id/fragment_detail_story"
+        android:name="com.dungLv.ui.showmore.detail.StoryDescribeFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_describe_story" />
+    <fragment
+        android:id="@+id/fragment_detail_top"
+        android:name="com.dungLv.ui.home.top.toplist.TopListFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_top" />
+    <fragment
+        android:id="@+id/fragment_detail_category"
+        android:name="com.dungLv.ui.home.category.categorylist.CategoryListFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_type" />
+    <fragment
+        android:id="@+id/fragment_read"
+        android:name="com.dungLv.ui.showmore.readstory.ReadStoryFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_read_story" />
+    <fragment
+        android:id="@+id/fragment_more_story"
+        android:name="com.dungLv.ui.showmore.storylist.StoryAllFragment"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment_story_all" />
+
+</navigation>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ct_top"
+            tools:layout_editor_absoluteX="-16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_list_story"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0dp"
+                    android:layout_marginTop="@dimen/dimen_70dp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toTopOf="@id/tv_category"
+                    app:layout_constraintDimensionRatio="2:1.2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_story" />
+
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_8dp"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:fontFamily="@font/fonts_medium"
+                    android:paddingStart="@dimen/dimen_8dp"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:text="@string/danh_m_c"
+                    android:textSize="@dimen/dimen_20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rc_list_story"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.dungLv.custom_view.ViewMenuHome
+                    android:id="@+id/view_top_story"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_0dp"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/custom_ripple_rectangle"
+                    app:layout_constraintDimensionRatio="2:1"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_category"
+                    app:layout_constraintRight_toLeftOf="@id/view_rank_story"
+                    app:layout_constraintTop_toBottomOf="@id/tv_category"
+                    app:textBottom="# TRUYỆN HAY"
+                    app:textTop="TOP TRUYỆN"
+
+                    />
+
+                <com.dungLv.custom_view.ViewMenuHome
+                    android:id="@+id/view_rank_story"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_0dp"
+                    android:layout_marginStart="@dimen/dimen_8dp"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/custom_ripple_rectangle"
+                    app:layout_constraintDimensionRatio="2:1"
+                    app:layout_constraintLeft_toRightOf="@id/view_top_story"
+                    app:layout_constraintRight_toRightOf="@id/tv_category"
+                    app:layout_constraintTop_toBottomOf="@id/tv_category"
+                    app:textBottom="# ĐỌC NHIỀU NHẤT"
+                    app:textTop="XẾP HẠNG"
+
+
+                    />
+
+                <com.dungLv.custom_view.ViewMenuHome
+                    android:id="@+id/view_type_story"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_0dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/custom_ripple_rectangle"
+                    app:layout_constraintDimensionRatio="2:1"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_category"
+                    app:layout_constraintRight_toLeftOf="@id/view_book_mark_story"
+                    app:layout_constraintTop_toBottomOf="@id/view_top_story"
+                    app:textBottom="# CHUYÊN MỤC"
+                    app:textTop="THỂ LOẠI"
+
+                    />
+
+                <com.dungLv.custom_view.ViewMenuHome
+                    android:id="@+id/view_book_mark_story"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/dimen_0dp"
+                    android:layout_marginStart="@dimen/dimen_8dp"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/custom_ripple_rectangle"
+                    android:layout_marginEnd="@dimen/dimen_8dp"
+                    app:layout_constraintDimensionRatio="2:1"
+                    app:layout_constraintLeft_toRightOf="@id/view_type_story"
+                    app:layout_constraintRight_toRightOf="@id/tv_category"
+                    app:layout_constraintTop_toBottomOf="@id/view_rank_story"
+                    app:textBottom="# TRUYỆN CỦA BẠN"
+                    app:textTop="BOOKMARK"
+
+                    />
+
+
+                <com.dungLv.custom_view.ViewListStory
+                    android:id="@+id/v_new_update"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/v_full"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_category"
+                    app:layout_constraintRight_toRightOf="@id/tv_category"
+                    app:layout_constraintTop_toBottomOf="@+id/view_type_story"
+
+                    />
+
+
+                <com.dungLv.custom_view.ViewListStory
+                    android:id="@+id/v_full"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_category"
+                    app:layout_constraintRight_toRightOf="@id/tv_category"
+                    app:layout_constraintTop_toBottomOf="@+id/v_new_update"
+
+                    />
+
+                <com.dungLv.custom_view.ViewListStory
+                    android:id="@+id/v_love_language"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_category"
+                    app:layout_constraintRight_toRightOf="@id/tv_category"
+                    app:layout_constraintTop_toBottomOf="@+id/v_full"
+
+                    />
+
+                <com.dungLv.custom_view.ViewListStory
+                    android:id="@+id/v_firs_half"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_category"
+                    app:layout_constraintRight_toRightOf="@id/tv_category"
+                    app:layout_constraintTop_toBottomOf="@+id/v_love_language"
+
+                    />
+
+                <com.dungLv.custom_view.ViewListStory
+                    android:id="@+id/v_american_checkers"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_category"
+                    app:layout_constraintRight_toRightOf="@id/tv_category"
+                    app:layout_constraintTop_toBottomOf="@+id/v_firs_half"
+
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ct_top"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_0dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:orientation="horizontal"
+            app:layout_constraintDimensionRatio="3:0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:focusable="true">
+
+
+            <ImageView
+                android:id="@+id/im_menu"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_menu_128"
+                android:alpha="0.8"
+                app:layout_constraintBottom_toBottomOf="@id/ct_top"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_name_story"
+                app:layout_constraintDimensionRatio="45:35"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_name_story"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/truy_n_88"
+                android:textSize="@dimen/dimen_18sp"
+                android:paddingVertical="@dimen/dimen_5dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/im_menu"
+                app:layout_constraintLeft_toRightOf="@id/im_menu"
+                app:layout_constraintTop_toTopOf="@id/im_menu" />
+
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="@dimen/dimen_0dp"
+                app:layout_constraintDimensionRatio="5:1.2"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:background="@drawable/custom_edt"
+                android:drawablePadding="@dimen/dimen_8dp"
+                android:fontFamily="@font/googlesans_light"
+                android:foreground="@drawable/custom_ripple_search"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:hint="@string/t_m_ki_m"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_14sp"
+                app:drawableStartCompat="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="@id/tv_name_story"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_name_story" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

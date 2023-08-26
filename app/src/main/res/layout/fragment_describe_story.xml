@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ct_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:id="@+id/sc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:src="@color/black"
+                    android:alpha="0.3"
+                    android:id="@+id/img_after"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="1:0.7"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_avatar"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintDimensionRatio="282:423"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="@id/img_after"
+                    android:layout_marginHorizontal="25dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintLeft_toLeftOf="@id/img_after"
+                    app:layout_constraintTop_toBottomOf="@id/tv_book_mark"
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/im_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:cropToPadding="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/im_avata" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:fontFamily="@font/nunito_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/black_clover"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="25sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/cv_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/tv_book_mark"
+                    tools:ignore="RtlSymmetry" />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/custom_color_add_book_mark"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_book_mark"
+                    app:layout_constraintLeft_toLeftOf="@id/im_add_story"
+                    app:layout_constraintRight_toRightOf="@id/tv_book_mark"
+                    app:layout_constraintTop_toTopOf="@id/tv_book_mark" />
+
+                <ImageView
+                    android:id="@+id/im_add_story"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_add"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_name"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_book_mark"
+                    app:layout_constraintRight_toLeftOf="@id/tv_book_mark"
+                    app:layout_constraintTop_toTopOf="@id/tv_book_mark"
+                    />
+                <TextView
+                    android:id="@+id/tv_book_mark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="left|center"
+                    android:textSize="20sp"
+                    android:paddingVertical="5dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/book_mark"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/tv_name"
+                    app:layout_constraintLeft_toRightOf="@id/im_add_story"
+                    app:layout_constraintRight_toRightOf="@id/img_after"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlSymmetry" />
+
+
+                <com.dungLv.ui.ViewStar
+                    android:id="@+id/v_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_read_story"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/custom_color_add_book_mark"
+                    android:text="@string/read_story"
+                    android:layout_marginTop="40dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/custom_ripple_rectangle"
+                    app:layout_constraintLeft_toLeftOf="@id/im_add_story"
+                    app:layout_constraintBottom_toBottomOf="@id/cv_avatar"
+                    app:layout_constraintRight_toRightOf="@id/tv_book_mark"
+
+                    />
+
+                <View
+                    android:id="@+id/v_describe"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/custom_color"
+                    app:layout_constraintDimensionRatio="1:1.5"
+                    app:layout_constraintLeft_toLeftOf="@id/img_after"
+                    app:layout_constraintTop_toBottomOf="@id/img_after" />
+
+
+                <TextView
+                    android:id="@+id/tv_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/nunito_bold"
+
+                    android:paddingBottom="10dp"
+                    android:text="@string/view"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="@id/v_describe"
+                    app:layout_constraintRight_toRightOf="@id/tv_chapter_number"
+                    app:layout_constraintTop_toTopOf="@id/v_describe" />
+
+                <TextView android:fontFamily="@font/fonts_light"
+                    android:id="@+id/tv_view_parameter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/view"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/tv_view"
+                    app:layout_constraintTop_toTopOf="@id/tv_view" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="@string/chapter_number"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nunito_bold"
+
+                    app:layout_constraintLeft_toLeftOf="@id/tv_view"
+                    app:layout_constraintTop_toBottomOf="@id/tv_view" />
+
+                <TextView
+                    android:id="@+id/tv_chapter_number_parameter"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/fonts_light"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_view_parameter"
+                    app:layout_constraintTop_toBottomOf="@id/tv_view" />
+
+                <TextView
+                    android:id="@+id/tv_author"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="@string/author"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nunito_bold"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_view"
+                    app:layout_constraintRight_toRightOf="@id/tv_chapter_number"
+                    app:layout_constraintTop_toBottomOf="@id/tv_chapter_number" />
+
+                <TextView
+                    android:id="@+id/tv_author_parameter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:fontFamily="@font/fonts_light"
+                    android:text="@string/view"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_view_parameter"
+                    app:layout_constraintTop_toBottomOf="@id/tv_chapter_number" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:text="@string/type"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nunito_bold"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_view"
+                    app:layout_constraintRight_toRightOf="@id/tv_chapter_number"
+                    app:layout_constraintTop_toBottomOf="@id/tv_author" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_type_all"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_view_parameter"
+                    app:layout_constraintTop_toBottomOf="@id/tv_author" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="@string/status"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_view"
+                    app:layout_constraintRight_toRightOf="@id/tv_chapter_number"
+                    app:layout_constraintTop_toBottomOf="@id/rc_type" />
+
+                <TextView
+                    android:id="@+id/tv_status_parameter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/fonts_light"
+                    android:text="@string/view"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_view_parameter"
+                    app:layout_constraintTop_toBottomOf="@id/rc_type" />
+
+                <TextView
+                    android:id="@+id/tv_describe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:text="@string/describe"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_view"
+                    android:fontFamily="@font/nunito_bold"
+                    app:layout_constraintRight_toRightOf="@id/tv_chapter_number"
+                    app:layout_constraintTop_toBottomOf="@id/tv_status" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/fonts_light"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:ignore="@string/introduce_content"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_view"
+                    app:layout_constraintTop_toBottomOf="@id/tv_describe" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+        <ImageView
+            android:id="@+id/im_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintDimensionRatio="10:10"
+            android:padding="10dp"
+            android:paddingVertical="5dp"
+            android:layout_marginStart="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/custom_ripple_back"
+            android:background="@drawable/custom_color_back"
+            android:src="@drawable/icback"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry"
+             />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
